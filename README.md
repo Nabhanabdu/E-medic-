@@ -17,9 +17,6 @@ The following tools were used in our project.
 <li>Neo4j No-Sql graph-store database.
 </ul>
 
-### Database 
-The backup of our database is in the folder <pre>db-dump</pre> One can backup the dump file using load command from <pre>neo4j-admin load --from= "dump-path" </pre>
-
 ### Run Project 
 Install Python and install packages: Flask, PyInvoice via Pip. Then run project using <pre>python app.py</pre>
 Project will run at <emp>https://localhost:8000</emp>
