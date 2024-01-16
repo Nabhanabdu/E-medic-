@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Consultation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Consultation Form</h1>
+        <form action="/submit_form" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="">Choose...</option>
+                <option value="doctor1">Doctor 1</option>
+                <option value="doctor2">Doctor 2</option>
+                <option value="doctor3">Doctor 3</option>
+            </select>
+            <label for="reason">Reason for Consultation:</label>
+            <select id="reason" name="reason" required>
+                <option value="">Choose...</option>
+                <option value="general_consultation">General Consultation</option>
+                <option value="routine_checkup">Routine Checkup</option>
+                <option value="illness">Illness</option>
+            </select>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">Choose...</option>
+                <option value="new_patient">New Patient</option>
+                <option value="follow_up">Follow-up</option>
+            </select>
+
+            <label for="blood_type">Blood Type:</label>
+            <select id="blood_type" name="blood_type" required>
+                <option value="">Choose...</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="text" id="contact" name="contact" required>
+
+           
+            <label for="consultation">Consultation Details:</label>
+            <textarea id="consultation" name="consultation" rows="4" cols="50" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
